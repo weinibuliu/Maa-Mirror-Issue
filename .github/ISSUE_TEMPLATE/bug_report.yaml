@@ -1,0 +1,51 @@
+name: Bug
+description: 链接缺失/不可用
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 在提问之前...
+      description: |
+        请确认自己完成了要求之后再进行勾选
+      options:
+        - label: 我已检查了公告、置顶议题（Pinned Issue）、活跃议题（Open Issue）、已关闭议题（Closed Issue），确认我的问题未被提及
+          required: true
+        - label: 我确定缺失/不可用的网盘分流链接为当前最新版本。
+          required: true
+
+  - type: textarea
+    id: describe
+    attributes:
+      label: 问题描述
+      description: MAA 分流链接缺失/不可用 or 网页其他链接不可用
+    validations:
+      required: true
+
+  - type: textarea
+    id: link
+    attributes:
+      label: 问题链接
+      description: 不可用链接
+    validations:
+      required: false
+
+  - type: textarea
+    id: version
+    attributes:
+      label: MAA 版本
+      description: |
+        当前最新 MAA 版本（如反馈 MAA 分流链接缺失/不可用问题，请务必填写）
+      placeholder: |
+        MAA Latest Version:
+    validations:
+      required: false
+
+  - type: textarea
+    id: others
+    attributes:
+      label: 还有别的吗？
+      description: |
+        任何能让我们对你所遇到的问题有更多了解的东西
+    validations:
+      required: false
